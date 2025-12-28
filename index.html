@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>52 Hukams — A Structured Sikhi Journey</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --neon: #00ffd5;
+  --bg: #050505;
+  --card: #0f0f0f;
+  --text: #eaeaea;
+  --muted: #9aa0a6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left span { color: var(--neon); }
+
+.hero-left p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  border: 1px solid var(--neon);
+  color: var(--neon);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: var(--neon);
+  color: #000;
+}
+
+/* ---------- SYLLABUS SNAPSHOT ---------- */
+.hero-right {
+  background: rgba(0,0,0,0.55);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(0,255,213,0.25);
+  backdrop-filter: blur(8px);
+}
+
+.hero-right h3 {
+  color: var(--neon);
+  margin-bottom: 1.5rem;
+}
+
+.syllabus-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.syllabus-item span {
+  color: var(--neon);
+  font-weight: 600;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  max-width: 100%;
+  margin: auto;
+  padding: 6rem 2rem;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+.section h2 span { color: var(--neon); }
+
+.section-intro {
+  max-width: 800px;
+  text-align: center;
+  margin: 1.5rem auto 0.5rem;
+  color: var(--muted);
+}
+
+/* ---------- BACKGROUND TEXT ---------- */
+.background-text {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.background-text p {
+  max-width: 800px;    
+  margin: 0 auto;        
+  text-align: center;    
+  padding: 1rem 1rem;
+  color: var(--muted);
+}
+
+/* ---------- DAILY HUKAM ---------- */
+.daily {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid var(--neon);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  background: rgba(0,0,0,0.4);
+}
+
+.daily h3 { color: var(--neon); margin-bottom: 1rem; }
+
+.daily .hukam-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.daily .reflection {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- RESOURCES ---------- */
+.resources {
+  background: #020202;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 2rem;
+}
+
+.resource {
+  padding: 1.5rem;
+  border-left: 3px solid var(--neon);
+  background: var(--card);
+  border-radius: 10px;
+}
+
+.resource h4 { color: var(--neon); margin-bottom: 0.5rem; }
+
+/* ---------- FOOTER CTA ---------- */
+.footer-cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #00ffd5, #00bfa6);
+  color: #000;
+}
+
+.footer-cta a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.5rem;
+  background: #000;
+  color: var(--neon);
+  border-radius: 30px;
+  text-decoration: none;
+}
+  
+/* Background section uses same image as hero */
+.background-section {
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+    url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+  
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-container">
+
+    <div class="hero-left">
+      <h1>The <span>52 Hukams</span><br>for the Modern Sikh</h1>
+      <p>
+        A structured journey through Guru Gobind Singh Ji’s final guidance —
+        designed to cultivate discipline, clarity, and strength in everyday life.
+      </p>
+      <a href="#daily" class="cta">Today’s Hukam</a>
+    </div>
+
+    <div class="hero-right">
+      <h3>What You’ll Learn</h3>
+      <div class="syllabus-item"><span>01</span><p>Personal discipline</p></div>
+      <div class="syllabus-item"><span>02</span><p>Identity & sovereignty</p></div>
+      <div class="syllabus-item"><span>03</span><p>Collective responsibility</p></div>
+      <div class="syllabus-item"><span>04</span><p>Living Sikhi in modern times</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BACKGROUND -->
+<section class="section background-section">
+  <h2>The <span>Background</span></h2>
+  <p class="section-intro">
+    The 52 Hukams emerge from a decisive and sacred moment in Sikh history,
+    forming a bridge between the Gurus and the self-governing Khalsa.
+  </p>
+
+  <div class="background-text">
+    <p>
+      When Guru Gobind Singh Sahib, the tenth manifestation of the Timeless Being
+      personified as Guru Nanak Dev Ji, reached Nanded (Deccan), a fatal attack was
+      made on his life by two Afghans sent by the Nawab of Sirhind. Though he initially
+      recovered under the surgical treatment of a British doctor, the wound later
+      reopened when he drew the string of a bow.
+    </p>
+
+    <p>
+      As the end drew near, the True Guru declined further surgical treatment.
+      He adorned his sacred body with arms, mounted his horse, and prepared
+      for his soul’s union with the Supreme Being. In these final moments,
+      Guru Gobind Singh Sahib, the embodiment of indomitable spirit, delivered
+      essential instructions to the Gursikhs present.
+    </p>
+
+    <p>
+      These teachings were recorded by Baba Ram Koer Ji, the great-grandson of
+      Baba Buddha Ji. They were later published widely by Sikh bodies and read
+      with eagerness and devotion by the Sikh community.
+    </p>
+
+    <p>
+      Guru Gobind Singh Sahib was the embodiment of Guru Nanak Dev Ji’s light,
+      preaching the same ideology and teachings at the cost of his life.
+      Terms such as <em>Fateh</em>, <em>Singh</em>, and <em>Sardar</em>, bestowed
+      upon the Khalsa by Guru Gobind Singh Ji, are deeply rooted in Guru Nanak Dev Ji’s
+      bani. The principles of uncut hair, the sword, and moral discipline
+      (<em>Sil</em>, <em>Jat</em>, <em>Kachh</em>) are clearly expressed in Gurbani
+      enshrined within the Guru Granth Sahib.
+    </p>
+  </div>
+</section>
+
+<!-- DAILY HUKAM -->
+<section class="section" id="daily">
+  <h2>Daily <span>Hukam</span></h2>
+  <p class="section-intro">
+    One Hukam each day — for reflection and lived practice.
+  </p>
+
+  <div class="daily">
+    <h3 id="hukam-number"></h3>
+    <div class="hukam-text" id="hukam-text"></div>
+    <div class="reflection" id="hukam-reflection"></div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section resources">
+  <h2>Further <span>Study</span></h2>
+  <p class="section-intro">
+    Sources for deeper understanding and contemplation.
+  </p>
+
+  <div class="resource-list">
+    <div class="resource"><h4>Guru Granth Sahib Ji</h4><p>The eternal Guru and spiritual authority.</p></div>
+    <div class="resource"><h4>Rehatnamas</h4><p>Historical Sikh codes of conduct.</p></div>
+    <div class="resource"><h4>Sikh Itihas</h4><p>Context of the Guru’s era and struggles.</p></div>
+    <div class="resource"><h4>Contemporary Scholarship</h4><p>Modern interpretations and reflections.</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="footer-cta">
+  <h2>Begin the Journey</h2>
+  <p>Progress over perfection.</p>
+  <a href="#">Start with Hukam #1</a>
+</section>
+
+<!-- DAILY HUKAM SCRIPT -->
+<script>
+const hukams = [
+  {
+    number: "Hukam #1",
+    text: "Rise during Amrit Vela and meditate on the Naam.",
+    reflection: "What would change if your day began with remembrance?"
+  },
+  {
+    number: "Hukam #2",
+    text: "Maintain discipline in appearance and conduct.",
+    reflection: "Does your outer life reflect your inner values?"
+  },
+  {
+    number: "Hukam #3",
+    text: "Speak truthfully and live honestly.",
+    reflection: "Where can truth bring clarity today?"
+  }
+];
+
+const today = new Date().getDate();
+const hukam = hukams[today % hukams.length];
+
+document.getElementById("hukam-number").innerText = hukam.number;
+document.getElementById("hukam-text").innerText = hukam.text;
+document.getElementById("hukam-reflection").innerText = hukam.reflection;
+</script>
+
+</body>
+</html>
